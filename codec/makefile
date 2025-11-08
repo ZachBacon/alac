@@ -1,8 +1,10 @@
 # libalac make
 
 CFLAGS = -g -O3 -c
+CXXFLAGS = -g -O3 -c
 LFLAGS = -Wall
-CC = g++
+CC = gcc
+CXX = g++
 
 SRCDIR = .
 OBJDIR = ./obj
@@ -52,10 +54,10 @@ ALACBitUtilities.o : ALACBitUtilities.c
 	$(CC) -I $(INCLUDES) $(CFLAGS) ALACBitUtilities.c
 
 ALACDecoder.o : ALACDecoder.cpp
-	$(CC) -I $(INCLUDES) $(CFLAGS) ALACDecoder.cpp
+	$(CXX) -I $(INCLUDES) $(CXXFLAGS) ALACDecoder.cpp
 
 ALACEncoder.o : ALACEncoder.cpp
-	$(CC) -I $(INCLUDES) $(CFLAGS) ALACEncoder.cpp
+	$(CXX) -I $(INCLUDES) $(CXXFLAGS) ALACEncoder.cpp
 
 ag_dec.o : ag_dec.c
 	$(CC) -I $(INCLUDES) $(CFLAGS) ag_dec.c
